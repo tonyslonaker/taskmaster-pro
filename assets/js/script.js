@@ -173,6 +173,11 @@ $("#remove-tasks").on("click", function() {
     $("#list-" + key).empty();
   }
   saveTasks();
+
+  <div class="m-5 row justify-content-around">
+    <h2>To Do</h2>
+    <ul id="list-toDo" class="list-group"></ul>
+  </div>
 });
 
 // load tasks for the first time
