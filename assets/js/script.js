@@ -65,6 +65,11 @@ $("#task-form-modal .btn-primary").click(function() {
   if (taskText && taskDate) {
     createTask(taskText, taskDate, "toDo");
 
+    $("#modalDueDate").datepicker();
+    $("#modalDueDate").datepicker({
+      minDate: 1
+    });
+
     // close modal
     $("#task-form-modal").modal("hide");
 
@@ -136,6 +141,10 @@ $(".list-group").on("click", "span", function() {
     .val(date);
   $(this).replaceWith(dateInput);
 
+  //enable jquery ui datepicker
+  dateInput.datepicker({
+    minDate: 1
+  })
   // automatically bring up the calendar
   dateInput.trigger("focus");
 });
