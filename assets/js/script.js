@@ -243,5 +243,14 @@ $("#remove-tasks").on("click", function() {
   saveTasks();
 });
 
+//setTimeout(function() {
+//  alert("This message happens after 5 seconds!");
+//}, 5000);
+
+setInterval(function() {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, (1000 * 60) * 30);
 // load tasks for the first time
 loadTasks();
